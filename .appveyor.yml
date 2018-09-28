@@ -7,9 +7,9 @@ environment:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       DEVENV_EXE: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2017\Community\Common7\IDE\devenv.exe
       VSDEVCMD_BAT: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2017\Community\Common7\Tools\VsDevCmd.bat
-    - MINGW_DIR: C:\MinGW
-      PATH: %PATH%;C:\MinGW\bin
-      CMAKE_GENERATOR: -G MinGW Makefiles
+    - MINGW_DIR: "C:\MinGW"
+      PATH: "%PATH%;C:\MinGW\bin"
+      CMAKE_GENERATOR: "-G MinGW Makefiles"
 
 install:
   - if not exist deps mkdir deps
