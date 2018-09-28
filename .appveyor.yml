@@ -19,7 +19,7 @@ install:
   - 7z x zlib.tar.gz -so | 7z x -si -ttar > nul
   - move zlib-1.2.8 zlib
   - cd zlib
-  - cmake . %CMAKE_GENERATOR%
+  - cmake . "%CMAKE_GENERATOR%"
   - cmake --build .
   - cd ..
   # libPNG
