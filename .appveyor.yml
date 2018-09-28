@@ -1,14 +1,14 @@
 
 environment:
   matrix:
+    - MINGW_DIR: C:\MinGW
+      CMAKE_GENERATOR: "-G MinGW Makefiles"
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
       DEVENV_EXE: C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\Common7\IDE\devenv.exe
       VSDEVCMD_BAT: C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\Common7\Tools\VsDevCmd.bat
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       DEVENV_EXE: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2017\Community\Common7\IDE\devenv.exe
       VSDEVCMD_BAT: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2017\Community\Common7\Tools\VsDevCmd.bat
-    - MINGW_DIR: C:\MinGW
-      CMAKE_GENERATOR: "-G MinGW Makefiles"
 
 install:
   - set PATH=%PATH%;C:\MinGW\bin
